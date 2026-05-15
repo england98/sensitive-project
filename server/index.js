@@ -100,10 +100,14 @@ app.post('/api/analyze', async (req, res) => {
     }
 });
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-    if (!supabase) {
-        console.warn('Warning: Supabase is not connected. Logs will not be saved.');
-    }
-});
+// Start server (Only if not running as a Vercel serverless function)
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+        if (!supabase) {
+            console.warn('Warning: Supabase is not connected. Logs will not be saved.');
+        }
+    });
+}
+
+export default app;
