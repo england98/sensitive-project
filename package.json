@@ -2,11 +2,11 @@
   "name": "day3",
   "version": "1.0.0",
   "description": "",
-  "main": "server/index.js",
+  "main": "api/index.js",
   "type": "module",
   "scripts": {
-    "dev": "\"C:\\Program Files\\nodejs\\node.exe\" --watch server/index.js",
-    "start": "\"C:\\Program Files\\nodejs\\node.exe\" server/index.js"
+    "dev": "\"C:\\Program Files\\nodejs\\node.exe\" --watch api/index.js",
+    "start": "\"C:\\Program Files\\nodejs\\node.exe\" api/index.js"
   },
   "keywords": [],
   "author": "",
